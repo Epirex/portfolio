@@ -132,70 +132,51 @@ h3 {
 /* HEADER */
 
 header {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em;
-}
-
-.logo {
-  max-width: 100px;
-}
-
-nav {
-  position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  position: sticky;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+  width: 100%;
+  z-index: 1000;
+}
 
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+.logo img {
+  max-height: 50px;
+}
+
+.nav {
+  flex-grow: 1;
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: flex-end;
+}
+
+.nav__item {
+  margin-left: 2em;
 }
 
 .nav__link {
-  color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h3);
+  color: var(--clr-light);
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--clr-accent);
 }
 
-.nav-open .nav {
-  transform: translateX(0);
-}
-
-.nav-open .nav-toggle {
-  position: fixed;
-}
-
-.nav-open .hamburger {
-  transform: rotate(0.625turn);
-}
-
-.nav-open .hamburger::before {
-  transform: rotate(90deg) translate(-6px);
-}
-
-.nav-open .hamburger::after {
-  opacity: 0;
-}
 /* MENU */
 
 .nav-toggle {
@@ -290,8 +271,17 @@ nav {
 }
 
 .service {
-  max-width: 500px;
-  margin: 0 auto;
+  flex: 1 1 calc(33.333% - 20px); /* Ajusta el tamaño de cada servicio */
+  margin: 10px;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  text-align: center;
+}
+
+.service__img {
+  display: block;
+  margin: 0 auto 1em auto; /* Centra la imagen y añade margen inferior */
+  max-width: 150px;
+  height: auto;
 }
 
 .my-services {
@@ -302,6 +292,7 @@ nav {
   color: var(--clr-light);
   text-align: center;
 }
+
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
@@ -320,14 +311,16 @@ nav {
 @media (min-width: 800px) {
   .services {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
-}
 
-.service + .service {
-  margin-left: 2em;
+  .service + .service {
+    margin-left: 0; /* Elimina el margen izquierdo adicional en pantallas grandes */
+  }
 }
 
 /*ABOUT ME*/
@@ -373,7 +366,6 @@ nav {
 }
 
 /*FOOTER*/
-
 .footer {
   background: #111;
   color: var(--clr-accent);
@@ -382,34 +374,127 @@ nav {
   font-size: var(--fs-h3);
 }
 
+.footer__title {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  font-weight: var(--fw-bold);
+}
+
 .footer a {
   color: inherit;
   text-decoration: none;
-}
-
-.footer__link {
-  font-weight: var(--fw-bold);
 }
 
 .social-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 2em 0;
   padding: 0;
 }
 
 .social-list__item {
-  margin: 0.5em;
+  margin: 0 1em;
 }
+
 .social-list__link {
-  padding: 0.5em;
-}
-.footer__link:hover {
-  text-decoration: underline;
+  color: var(--clr-accent);
+  font-size: 2em;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer__link:hover,
 .social-list__link:hover {
-  opacity: 0.7;
+  color: var(--clr-primary);
+  transform: scale(1.1);
+}
+
+.footer__year {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+/* MODAL GALLERY */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-content img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* MODAL VIDEO */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+video {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }

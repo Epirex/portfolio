@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/logo.png">
-    <title>Esteban Guzzo</title>
+    <title>Esteban Guzzo - Portfolio</title>
 
     <link
       rel="stylesheet"
@@ -14,27 +14,16 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc="
       crossorigin="anonymous"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/351c5e3e86.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="img/logo.jpg" alt="" />
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
@@ -42,7 +31,7 @@
             <a href="#services" class="nav__link">Mis trabajos</a>
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">Acerca de mi</a>
+            <a href="#about" class="nav__link">Acerca de mí</a>
           </li>
           <li class="nav__item">
             <a href="#contact" class="nav__link">Contacto</a>
@@ -54,88 +43,206 @@
     <!-- Introduction -->
     <section class="intro" id="home">
       <h1 class="section__title section__title--intro">
-        Hola! soy <strong>Esteban Guzzo</strong>
+        ¡Hola! Soy <strong>Esteban Guzzo</strong>
       </h1>
-      <p class="section__subtitle section__subtitle--intro">UN SIMPATICO DEV</p>
+      <p class="section__subtitle section__subtitle--intro">UN SIMPÁTICO DEV</p>
       <img src="img/index.jpg" class="intro__img" />
     </section>
 
-    <!--My Services-->
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">Mis trabajos</h2>
-      <div class="services">
-        <!--Service-->
-        <div class="service">
-          <h3>Android Developer</h3>
-          <h3>2015-2018</h3>
-          <p>
-            Durante años porte diferentes versiones del sistema operativo
-            Android para distintos telefonos, utilizando las fuentes que 
-            proporcionan las empresas como NovaThor, Exynos, Qcomm, etc.
-          </p>
-        <a href="https://forum.xda-developers.com/search/46444223/" class="btn">Mis posts en XDA</a>
-        </div>
-        <!--Service-->
-        <div class="service">
-          <h3>Q.A. Tester</h3>
-          <h3>2022</h3>
-          <p>
-            Actualmente me encuentro estudiando en Egg Cooperation
-            para convertirme en Q.A. Automation.
-          </p>
-          <a href="https://github.com/Epirex" class="btn">Mi github</a>
-        </div>
-      </div>
-
-    </section>
-
-    <!--About me-->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">Quien soy</h2>
-      <p class="section__subtitle section__subtitle--about">
-        Un simpatico Developer ubicado en San Fernando del Valle de Catamarca, Argentina
+    <!-- Services -->
+<section class="my-services" id="services">
+  <h2 class="section__title section__title--services">Mis trabajos</h2>
+  <div class="services">
+    <div class="service">
+      <img src="img/novathor.png" class="service__img">
+      <h3>Android Developer</h3>
+      <p>
+        Durante años porté diferentes versiones de Android para distintos teléfonos
+        utilizando el código fuente original del dispositivo.
       </p>
-      <div class="about-me__body">
-        <p>
-          Me llamo Esteban Guzzo, tengo 23 años y vivo en la provincia de
-          Catamarca. Desde chico siempre fui un aficionado por la tecnologia
-          en general, mis primeros pasos en el mundo de la programacion fueron
-          en el entorno del sistema operativo Android (Custom ROM's)
-        </p>
-        <p>
-          Me adapto con facilidad a los entornos de trabajo y cuento con medio
-          de transporte propio, dispongo de disponibilidad horaria completa
-          y siempre cumplo con las metas que propongan.
-          Ah tambien soy buen compañero de oficina, bastante simpatico.
-        </p>
-        <p>
-          Fuera del mundo de la programacion me dedique a trabajar en una empresa
-          de archivos (Inter-File), luego siendo delivery en PedidosYa.
-          
-          
-        </p>
-      </div>
-      <img src="img/esteban.jpg" class="about-me__img" />
-    </section>
+      <a href="https://xdaforums.com/m/epirex.5371721/#recent-content" class="btn" target=”_blank”>Mis posts en XDA</a>
+    </div>
+    <div class="service">
+      <img src="img/webview.png" class="service__img">
+      <h3>SupraKiosk</h3>
+      <p>
+        SupraKiosk es un navegador cerrado para mostrar contenido exclusivo del cliente.
+        Diseñado para funcionar en tótems interactivos.
+      </p>
+      <a class="btn" onclick="openGallery('SupraKiosk')">Imágenes</a>
+    </div>
+    <div class="service">
+      <img src="img/supracontrol.png" class="service__img">
+      <h3>SupraControl</h3>
+      <p>
+        SupraControl es una App secundaria o complemento de SupraKiosk, su función es
+        controlar el contenido que se muestra en SupraKiosk.
+      </p>
+      <a class="btn" onclick="openGallery('SupraControl')">Imágenes</a>
+    </div>
+    <div class="service">
+      <img src="img/aima.png" class="service__img">
+      <h3>AIMA</h3>
+      <p>
+        AIMA es un Chat Bot conectado con la API de OpenAI, diseñada y entrenada para
+        ser una experta en Marketing Digital.
+      </p>
+      <a class="btn" onclick="openGallery('AIMA')">Imágenes</a>
+    </div>
+    <div class="service">
+      <img src="img/tvbar.png" class="service__img">
+      <h3>TVBar</h3>
+      <p>
+        TVBar fue creada para innovar la cartelería digital, muestra canales de televisión por
+        Internet y también muestra contenido del cliente.
+      </p>
+      <a class="btn" onclick="openGallery('TVBar')">Imágenes</a>
+    </div>
+    <div class="service">
+      <img src="img/catamarca360.png" class="service__img">
+      <h3>Catamarca 360º</h3>
+      <p>
+        Catamarca 360° es una WebApp que muestra panoramas 360° de la provincia de Catamarca separada
+        por regiones.
+      </p>
+      <a href="https://estebanguzzo.com.ar/catamarca360" class="btn" target=”_blank”>Probar App</a>
+    </div>
+    <div class="service">
+      <img src="img/pucara360.png" class="service__img">
+      <h3>Pucara 360º</h3>
+      <p>
+        Pucara 360° es una WebApp similar a Catamarca 360° pero con temática del Pucara de Aconquija,
+        Catamarca.
+      </p>
+      <a href="https://estebanguzzo.com.ar/pucara360" class="btn" target=”_blank”>Probar App</a>
+    </div>
+    <div class="service">
+      <img src="img/belen360.png" class="service__img">
+      <h3>Belen 360º (VR)</h3>
+      <p>
+        Belen 360° es una App creada para los Oculus Quest 2. Muestra videos en 360° con la
+        funcionalidad de Kiosco, ideal para eventos.
+      </p>
+      <a class="btn" onclick="openVideo('Belen360')">Ver video</a>
+    </div>
+    <div class="service">
+      <img src="img/camyen360.png" class="service__img">
+      <h3>Camyen 360º (VR)</h3>
+      <p>
+        Camyen 360° es un mini-juego creado para los Oculus Quest 2. El entorno está creado con
+        fotogrametría.
+      </p>
+      <a class="btn" onclick="openVideo('camyen360')">Ver video</a>
+    </div>
+    <div class="service">
+      <img src="img/milei.png" class="service__img">
+      <h3>Billetes Argentinos (AR)</h3>
+      <p>
+        Billetes Argentinos es una App de Realidad Aumentada, enfocando la cámara en un billete de
+        1000 pesos, saldrá Milei bailando, es una pequeña demo.
+      </p>
+      <a class="btn" onclick="openVideo('BilletesArgentinos')">Ver video</a>
+    </div>
+    <div class="service">
+      <img src="img/cardenasmania.png" class="service__img">
+      <h3>Cardenasmania (Juego)</h3>
+      <p>
+        Cardenasmania es un juego de plataforma hecho en Construct 3. Básicamente es un Sonic creado de cero
+        en donde el villano es mi ex jefe Sebastián Cárdenas.
+      </p>
+      <a href="https://estebanguzzo.com.ar/cardenas" class="btn" target=”_blank”>Probar Juego</a>
+    </div>
+    <div class="service">
+      <img src="img/psicologos.png" class="service__img">
+      <h3>Psicologos Catamarca (W.I.P)</h3>
+      <p>
+        Una Progressive Web App, la App consiste en un listado con todos los psicólogos de
+        Catamarca. Todavía se encuentra en etapa temprana de desarrollo.
+      </p>
+      <a href="https://estebanguzzo.com.ar/viernes" class="btn" target=”_blank”>¡Próximamente!</a>
+    </div>
+  </div>
+</section>
 
-    <!--Footer-->
-    <footer class="footer" id="contact">
-      <a href="mailto:estebanguzzo@gmail.com" class="footer__link"
-        >Mi Correo</a
-      >
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://github.com/Epirex"
-            ><i class="fab fa-github">Mi Github</i
-          ></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://twitter.com/EstebanGuzzo"
-            ><i class="fab fa-twitter">Mi Twitter</i
-          ></a>
-        </li>
-      </ul>
-    </footer>
+    <!-- Modal for Gallery -->
+    <div id="galleryModal" class="modal">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <div class="modal-content">
+        <img id="galleryImg1" src="" alt="Gallery Image 1">
+        <img id="galleryImg2" src="" alt="Gallery Image 2">
+        <img id="galleryImg3" src="" alt="Gallery Image 3">
+      </div>
+    </div>
+    <!-- Modal for Video -->
+<div id="videoModal" class="modal">
+  <span class="close" onclick="closeVideo()">&times;</span>
+  <div class="modal-content">
+    <video id="videoPlayer" controls autoplay>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!--About me-->
+<section class="about-me" id="about">
+  <h2 class="section__title section__title--about">Acerca de mí</h2>
+  <p class="section__subtitle section__subtitle--about">
+    Un simpático programador ubicado en San Fernando del Valle de Catamarca, Argentina
+  </p>
+  <div class="about-me__body">
+    <p>
+      Me llamo Esteban Guzzo, tengo 25 años y desde chico siempre fui un aficionado por la tecnología
+      en general. Mis primeros pasos en el mundo de la programación fueron gracias a Android. Actualmente,
+      me encuentro trabajando en una empresa de software (Supranet.ar) de manera presencial en la provincia
+      de Catamarca.
+    </p>
+    <p>
+      Manejo muchísimas tecnologías y lenguajes de programación, pero principalmente me destaco en el lenguaje de Kotlin
+      y el uso de Android Studio, Unity para crear apps de realidad virtual (Oculus Quest 2) y WordPress para la creación
+      de páginas web.
+    </p>
+    <p>
+      Me adapto con facilidad a los entornos de trabajo y cuento con medio
+      de transporte propio, dispongo de disponibilidad horaria completa
+      y siempre cumplo con las metas que se propongan.
+      Ah, también soy buen compañero de oficina, bastante simpático.
+    </p>
+  </div>
+  <img src="img/esteban.jpg" class="about-me__img" />
+</section>
+
+
+<!--Footer-->
+<footer class="footer" id="contact">
+  <p class="footer__title">Mis redes</p>
+  <ul class="social-list">
+    <li class="social-list__item">
+      <a class="social-list__link" href="https://github.com/Epirex" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li class="social-list__item">
+      <a class="social-list__link" href="https://twitter.com/EstebanGuzzo" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="social-list__item">
+      <a class="social-list__link" href="https://www.linkedin.com/in/estebanguzzo" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="social-list__item">
+      <a class="social-list__link" href="https://www.instagram.com/estebanguzzo" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  </ul>
+  <p class="footer__year">&copy; <span id="currentYear"></span> Esteban Guzzo</p>
+</footer>
+
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
 
     <script src="index.js"></script>
   </body>
