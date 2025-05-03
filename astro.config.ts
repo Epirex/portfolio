@@ -6,6 +6,9 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://estebanguzzo.com.ar',
+  base: '/portfolio/',
+  output: 'static',
   integrations: [tailwind(), image(), compress()],
   vite: {
     plugins: [visualizer()],
