@@ -21,7 +21,7 @@ const mainSectionData = {
   tags: [{ name: 'Abierto a freelance' }, { name: 'Disponible para empresas' }, { name: 'Trabajando en proyectos propios' }],
   action: {
     label: 'Descargar CV',
-    url: 'portfolio/cv.pdf',
+    url: './cv.pdf',
     downloadedFileName: 'estebanguzzo.pdf',
   },
   links: [instagram({ url: 'https://www.instagram.com/estebanguzzo/', target:'_blank' }), github({ url: 'https://github.com/Epirex' }), linkedin({ url: 'https://www.linkedin.com/in/estebanguzzo/' }), twitter({ url: 'https://x.com/EstebanGuzzo' })],
